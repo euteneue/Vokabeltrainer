@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="bg_small.png" />
+    <None Remove="main_icon.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\VokabelTrainerLogik\VokabelTrainerLogik.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="bg_small.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="main_icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+</Project>

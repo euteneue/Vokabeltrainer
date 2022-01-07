@@ -1,0 +1,29 @@
+﻿<Window x:Class="VokabelTrainerDesktop.PlayGameWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VokabelTrainerDesktop"
+        mc:Ignorable="d"
+        Title="Vokabel-Abfrage" Height="450" Width="800">
+    <Grid DockPanel.Dock="Bottom" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="2*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="2*" />
+        </Grid.RowDefinitions>
+
+        
+        <Label x:Name="lblVokabel" Content="_Vokabel:" Grid.Row="0" Grid.Column="0" />
+        <Label x:Name="lblVocQuestion" Content="test" Grid.Row="0" Grid.Column="1" FontSize="36" />
+        <Label x:Name="lblTranslation" Content="_Übersetzung:" Grid.Row="1" Grid.Column="0  " />
+        <TextBox x:Name="txtInput" TextWrapping="Wrap" Text="" Grid.Row="1" Grid.Column="1" FontSize="36"/>
+        <Button x:Name="cmdCheck" Content="_Check..." Grid.ColumnSpan="2" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Right" MinWidth="200" Margin="10,10,50,10" FontSize="36" Click="cmdCheck_Click"/>
+
+    </Grid>
+</Window>

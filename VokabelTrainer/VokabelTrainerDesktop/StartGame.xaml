@@ -1,0 +1,34 @@
+﻿<Window x:Class="VokabelTrainerDesktop.StartGame"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VokabelTrainerDesktop"
+        mc:Ignorable="d"
+        Title="Spiel starten..." SizeToContent="WidthAndHeight" Topmost="True" WindowStartupLocation="CenterOwner" >
+    <Grid Margin="15">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Label Name="lblLanguage" Content="_Sprache:" Grid.Column="0"/>
+        <ListBox Name="lstLanguages" Grid.Column="1" MinWidth="250" MinHeight="100" SelectedIndex="0" />
+        <Label Name="lblAbschnitt" Content="_Abschnitt:" Grid.Column="0" Grid.Row="1"/>
+        <ListBox Name="lstAbschnitte" Grid.Column="1" Grid.Row="1" MinWidth="250" MinHeight="100" SelectedIndex="0" SelectionMode="Multiple" />
+        <Label Name="lblMode" Content="Spiel_modus:" Grid.Column="0" Grid.Row="2"/>
+        <StackPanel Grid.Row="2" Grid.Column="1" Margin="10,10,10,10">
+            <RadioButton GroupName="mode" Name="butLinear">_Linear</RadioButton>
+            <RadioButton GroupName="mode" Name="butRandom">_Zufällig</RadioButton>
+        </StackPanel>
+        <WrapPanel Grid.Row="3" Grid.ColumnSpan="2" HorizontalAlignment="Right" Margin="10,10,10,10" >
+            <Button x:Name="cmdOK" Content="OK" MinWidth="60" IsDefault="True" Margin="0,0,10,0" Click="cmdOK_Click"></Button>
+            <Button x:Name="cmdCancel" Content="Abbrechen" MinWidth="60" IsCancel="True"></Button>
+        </WrapPanel>
+    </Grid>
+</Window>
